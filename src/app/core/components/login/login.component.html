@@ -1,0 +1,33 @@
+<div class="container">
+    <form [formGroup]="group">
+        <mat-card>
+            <mat-icon>person</mat-icon>
+            <mat-card-header>
+                <mat-card-title>Iniciar Sesión</mat-card-title>
+                <mat-card-subtitle>Ingrese sus datos para iniciar sesión</mat-card-subtitle>
+            </mat-card-header>
+            
+            <mat-card-content>
+                <jlop-custom-imput
+                    label="Correo"
+                    type="email"
+                    placeholder="Ingrese su correo"
+                    [required]="true"
+                    [control]="group.controls.email"
+                    icon="email">
+                </jlop-custom-imput>
+
+                <jlop-custom-imput
+                    label="Contraseña"
+                    type="password"
+                    placeholder="Ingrese su contraseña"
+                    [required]="true"
+                    [control]="group.controls.password"
+                    icon="lock">
+                </jlop-custom-imput>
+
+                <button mat-button [disabled]="group.invalid" (click)="goToLogin()">Iniciar Sesión</button>
+            </mat-card-content>
+        </mat-card>
+    </form>
+</div>

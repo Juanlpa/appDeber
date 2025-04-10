@@ -1,0 +1,19 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="toggleSidenav.emit()">
+        <mat-icon style="color: white;">menu</mat-icon>
+      </button>
+    <button mat-button [matMenuTriggerFor]="menu">
+        <div class="container">
+            <img src="../../../../assets/image/avatar-svgrepo-com3.svg" alt="" class="logo">
+           <span style="color: white;">Usuario</span>
+           <mat-icon style="color: white;">keyboard_arrow_down</mat-icon>
+        </div>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="singOut()">
+            <mat-icon>logout</mat-icon>
+        <span>Cerrar Sesion</span>
+        </button>
+        
+    </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+  mat-nav-list {
+    width: 100%;
+    margin-top: 64px; 
+    overflow-y: auto;
+    padding: 16px 0;
+
+}
+mat-list-item {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 0 24px 24px 0;
+}
+  mat-list-item img{
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+  }
+  span{
+    display: inline-block;
+    padding-left: 8px;
+    font-size: 18px;
+  }
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    color: white !important;
+    font-size: 14px;
+  }
+  .textAlign{
+    color: white !important;
+  }

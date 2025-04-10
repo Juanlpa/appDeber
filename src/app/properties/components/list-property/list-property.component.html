@@ -1,0 +1,17 @@
+
+
+<div class="container">
+    <div class="info">
+        <mat-icon>house</mat-icon>
+        <h1 style="color: white;">Propiedades</h1>
+    <div class="propiedad-container">
+        <div class="propiedad-card" *ngFor="let propiedad of propiedades">
+            
+            <h2>{{ propiedad.nombre }}</h2>
+            <p>{{ propiedad.descripcion }}</p>
+            <p>Precio: {{ propiedad.precio }}</p>
+            <button (click)="verDetalle(propiedad)">Ver Detalles</button>
+        </div>
+    </div>
+    </div>
+</div>

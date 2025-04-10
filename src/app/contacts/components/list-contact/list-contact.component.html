@@ -1,0 +1,15 @@
+
+<div class="container">
+    <div class="info">
+        <mat-icon>contact_mail</mat-icon>
+        <h1 style="color: white;">Lista de Contactos</h1>
+    <div class="contacto-container">
+        <div class="contacto-card" *ngFor="let contacto of contactos">
+            <h2>{{ contacto.nombre }}</h2>
+            <p>Teléfono: {{ contacto.telefono }}</p>
+            <p>Email: {{ contacto.email }}</p>
+            <button (click)="verDetalle(contacto)">Ver Detalles</button>
+        </div>
+    </div>
+    </div>
+</div>

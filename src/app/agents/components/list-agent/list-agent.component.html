@@ -1,0 +1,14 @@
+
+<div class="container">
+    <div class="info">
+        <mat-icon>person_pin</mat-icon>
+        <h1 style="color: white;">Lista de Agentes</h1>
+    <div class="agente-container">
+        <div class="agente-card" *ngFor="let agente of agentes">
+            <h2>{{ agente.nombre }}</h2>
+            <p>{{ agente.descripcion }}</p>
+            <button (click)="verPerfil(agente)">Ver Perfil</button>
+        </div>
+    </div>
+    </div>
+</div>

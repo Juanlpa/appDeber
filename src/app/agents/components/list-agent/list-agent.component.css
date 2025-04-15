@@ -1,9 +1,11 @@
 .container {
-    display: flex;
-    justify-content: center; 
-    align-items: center;    
     width: 100vw;
     height: 100vh;
+    padding: 30px; /* mantiene los 30px en todos los lados */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* centrado horizontal */
+    align-items: flex-start; /* ahora alinea arriba */
     background: url('https://www.fynsa.com/wp-content/uploads/2021/07/iStock-1282624945-791x307.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
@@ -12,53 +14,23 @@
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    max-width: 1200px;
     padding: 50px;
     background: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.info h2 {
-    padding-top: 20px;
-    color: whitesmoke;
-    font-size: 42px;
-    line-height: 46px;
-    text-align: center;
-}
-
-mat-icon {
-    font-size: 100px !important;
-    color: blanchedalmond;
-    width: auto;
-    height: auto;
-    display: inline-block;
-}
-
-
-.btn-login {
-    margin-top: 20px;
-    padding: 12px 24px;
-    font-size: 18px;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.btn-login:hover {
-    background-color: #0056b3;
-}
-
 
 .agente-container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 20px;
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -69,13 +41,7 @@ mat-icon {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 250px;
-}
-
-.agente-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .agente-card h2 {
@@ -85,6 +51,7 @@ mat-icon {
 
 .agente-card p {
     color: #7f8c8d;
+    font-size: 15px;
 }
 
 .agente-card button {
@@ -100,3 +67,47 @@ mat-icon {
 .agente-card button:hover {
     background-color: #2980b9;
 }
+
+mat-icon {
+    font-size: 30px !important;
+    color: blanchedalmond;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+
+
+.acciones {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn-azul {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-verde {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-azul:hover {
+    background-color: #2980b9;
+}
+
+.btn-verde:hover {
+    background-color: #27ae60;
+}
+

@@ -83,3 +83,38 @@ mat-icon {
     background-color: #2980b9;
 }
 
+.acciones {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn-azul {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-verde {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-azul:hover {
+    background-color: #2980b9;
+}
+
+.btn-verde:hover {
+    background-color: #27ae60;
+}
+
+

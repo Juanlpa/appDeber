@@ -39,11 +39,6 @@ export class MenuService {
       title: 'Propiedades',
       url: '/properties',
       icon: 'property'
-    },
-    {
-      title: 'Transacciones',
-      url: '/transactions',
-      icon: 'transaction'
     }
 
   ];

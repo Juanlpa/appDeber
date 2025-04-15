@@ -1,13 +1,20 @@
 <div class="container">
     <div class="info">
-        <mat-icon>add_shopping_cart</mat-icon>
-        <h1 style="color: white;">Lista de Clientes</h1>
-    <div class="cliente-container">
+      <mat-icon>add_shopping_cart</mat-icon>
+      <h1 style="color: white;">Lista de Clientes</h1>
+      <!-- Botones de acción -->
+      <div class="acciones">
+        <button class="btn-azul" (click)="agregarCliente()">Agregar Cliente</button>
+        <!-- <button class="btn-verde" (click)="exportarExcel()">Excel</button> -->
+      </div>
+  
+      <div class="cliente-container">
         <div class="cliente-card" *ngFor="let cliente of clientes">
-            <h2>{{ cliente.nombre }}</h2>
-            <p>{{ cliente.descripcion }}</p>
-            <button (click)="verPerfil(cliente)">Ver Perfil</button>
+          <h2>{{ cliente.nombre }}</h2>
+          <p>{{ cliente.descripcion }}</p>
+          <button (click)="verPerfil(cliente)">Ver Perfil</button>
         </div>
+      </div>
     </div>
-    </div>
-</div>
+  </div>
+  

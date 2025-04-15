@@ -5,7 +5,7 @@ import { ListClientComponent } from './clients/components/list-client/list-clien
 import { ListContactComponent } from './contacts/components/list-contact/list-contact.component';
 import { ListAgentComponent } from './agents/components/list-agent/list-agent.component';
 import { ListPropertyComponent } from './properties/components/list-property/list-property.component';
-import { ListTransactionComponent } from './transactions/components/list-transaction/list-transaction.component';
+
 import { ListFavoriteComponent } from './favorites/components/list-favorite/list-favorite.component';
 
 export const routes: Routes = [
@@ -16,5 +16,5 @@ export const routes: Routes = [
     { path: 'contacts', component: ListContactComponent },
     { path: 'favorites', component: ListFavoriteComponent},
     { path: 'properties', component: ListPropertyComponent },
-    { path: 'transactions', component: ListTransactionComponent },
+
 ];

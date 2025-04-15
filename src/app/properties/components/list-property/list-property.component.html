@@ -1,17 +1,42 @@
-
-
 <div class="container">
     <div class="info">
-        <mat-icon>house</mat-icon>
-        <h1 style="color: white;">Propiedades</h1>
-    <div class="propiedad-container">
+      <mat-icon>house</mat-icon>
+      <h1 style="color: white;">Propiedades</h1>
+  
+      <!-- Botones de acción -->
+      <div class="acciones">
+        <button class="btn-azul" (click)="agregarPropiedad()">Agregar Propiedad</button>
+        <!-- <button class="btn-verde" (click)="exportarExcel()">Excel</button> -->
+      </div>
+  
+      <!-- Botón para alternar entre ver tabla o tarjetas -->
+      <button class="toggle-button" (click)="mostrarTabla = !mostrarTabla">
+        {{ mostrarTabla ? 'Ver Cards' : 'Ver Detalles' }}
+      </button>
+  
+      <!-- Muestra tarjetas cuando mostrarT abla es false -->
+      <div *ngIf="!mostrarTabla" class="propiedad-container">
         <div class="propiedad-card" *ngFor="let propiedad of propiedades">
-            
-            <h2>{{ propiedad.nombre }}</h2>
-            <p>{{ propiedad.descripcion }}</p>
-            <p>Precio: {{ propiedad.precio }}</p>
-            <button (click)="verDetalle(propiedad)">Ver Detalles</button>
+          <h2>{{ propiedad.nombre }}</h2>
+          <p>Precio: {{ propiedad.descripcion }}</p>
         </div>
+      </div>
+  
+      <!-- Muestra tabla cuando mostrarTabla es true -->
+      <table *ngIf="mostrarTabla" class="tabla-detalles">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let propiedad of propiedades">
+            <td>{{ propiedad.nombre }}</td>
+            <td>{{ propiedad.descripcion }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    </div>
-</div>
+  </div>
+  
